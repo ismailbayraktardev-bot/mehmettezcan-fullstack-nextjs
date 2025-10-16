@@ -84,8 +84,8 @@ export default function HeroSection() {
           className="text-5xl md:text-6xl font-bold text-white mb-6 leading-[1.1]"
           style={{ fontSize: 'clamp(2rem, 6vw, 6rem)' }}
         >
-          Dijital Dünyanızı
-          <span className="block text-amber-500 mt-2">Birlikte İnşa Edelim</span>
+          Hello World
+          <span className="block text-amber-500 mt-2">🚀 İlk Deploy Başarılı!</span>
         </motion.h1>
 
         {/* Description */}
