@@ -95,3 +95,17 @@ h1, h2, h3, h4, h5, h6 {
   outline: 2px solid #f59e0b;
   outline-offset: 2px;
 }
+
+/* Marquee Animations */
+@keyframes marquee-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-slow {
+  animation: marquee-slow 60s linear infinite;
+}

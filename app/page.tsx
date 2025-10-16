@@ -4,8 +4,11 @@ import HeroSection from '@/components/sections/HeroSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import WhyUsSection from '@/components/sections/WhyUsSection'
 import WorkProcessSection from '@/components/sections/WorkProcessSection'
-import ProjectsSection from '@/components/sections/ProjectsSection'
+import FeaturedProjectsShowcase from '@/components/creative/FeaturedProjectsShowcase'
+import TestimonialShowcase from '@/components/creative/TestimonialShowcase'
+import StrategicCTA from '@/components/creative/StrategicCTA'
 import FAQSection from '@/components/sections/FAQSection'
+import { projects } from '@/data/projects'
 
 const homepageFAQs = [
   {
@@ -40,14 +43,28 @@ export default function Home() {
       <Header />
       <main className="relative">
         <HeroSection />
+
         <ServicesSection />
+
         <WhyUsSection />
+
         <WorkProcessSection />
-        <ProjectsSection />
+
+        <FeaturedProjectsShowcase projects={projects} />
+
+        <TestimonialShowcase />
+
         <FAQSection
           faqs={homepageFAQs}
           title="Sık Sorulan Sorular"
           description="Dijital ajans hizmetlerimiz hakkında merak ettikleriniz"
+        />
+
+        <StrategicCTA
+          variant="primary"
+          title="Projenizi Gerçeğe Dönüştürmeye Hazır mısınız?"
+          description="Dijital dünyada fark yaratmak için bugün başlayalım. Ücretsiz danışmanlık için hemen iletişime geçin."
+          buttonText="Ücretsiz Görüşme"
         />
       </main>
 

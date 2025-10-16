@@ -28,7 +28,7 @@ const steps = [
   {
     number: '04',
     icon: Rocket,
-    title: 'Yayınlama & Lansma n',
+    title: 'Yayınlama & Lansman',
     description:
       'Projenizi canlıya alıyor, SEO optimizasyonu yapıyoruz. Hosting, domain ve tüm teknik altyapıyı hazırlayarak yayınlıyoruz.',
   },
@@ -60,14 +60,14 @@ export default function WorkProcessSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.0 }}
           className="text-center mb-20"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="inline-block px-4 py-2 glass rounded-full mb-6"
           >
             <span className="text-sm text-primary font-semibold uppercase tracking-wider">
@@ -96,9 +96,9 @@ export default function WorkProcessSection() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 1.0, delay: index * 0.1 }}
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="group relative glass-strong rounded-3xl p-8 hover:border-primary/20 transition-colors duration-200"
+                className="group relative glass-strong rounded-3xl p-8 hover:border-primary/20 transition-colors duration-300"
               >
                 {/* Minimal Hover Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 group-hover:from-primary/8 rounded-3xl transition-all duration-300" />

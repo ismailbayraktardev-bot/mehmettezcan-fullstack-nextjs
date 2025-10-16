@@ -1,12 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY!
+// Dummy fallback for build time
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY || 'placeholder-key'
 
-if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error('Missing Supabase service environment variables')
-}
-
+// Supabase admin client - will fail at runtime if env vars are not properly set
 export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
   auth: {
     autoRefreshToken: false,

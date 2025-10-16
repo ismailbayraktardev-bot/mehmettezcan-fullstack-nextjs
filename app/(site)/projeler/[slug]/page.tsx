@@ -107,31 +107,36 @@ export default function ProjectDetailPage() {
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left: Sticky Visual Placeholder */}
+            {/* Left: Sticky Project Image */}
             <div className="lg:sticky lg:top-32 h-[600px]">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-full glass-strong rounded-3xl flex items-center justify-center relative overflow-hidden"
+                className="w-full h-full glass-strong rounded-3xl relative overflow-hidden group"
               >
-                {/* Gradient Placeholder for Visual */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-amber-600/10 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 h-64 bg-amber-500/20 rounded-full blur-3xl" />
-                </div>
+                {/* Project Image */}
+                <img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-                {/* Project Category Badge */}
-                <div className="relative z-10 text-center">
-                  <div className="inline-block px-6 py-3 bg-amber-500/10 border border-amber-500/20 rounded-full mb-4">
-                    <span className="text-amber-400 font-semibold text-lg">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                {/* Project Info Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                  <div className="inline-block px-4 py-2 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full mb-4">
+                    <span className="text-amber-400 font-semibold text-sm">
                       {project.category}
                     </span>
                   </div>
                   <h3 className="text-3xl font-display font-bold text-white">
                     {project.title}
                   </h3>
+                  <p className="text-white/70 mt-2">{project.year}</p>
                 </div>
               </motion.div>
             </div>

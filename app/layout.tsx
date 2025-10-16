@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  keywords: [...siteConfig.keywords],
   authors: [siteConfig.author],
   creator: siteConfig.creator,
   openGraph: {
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.openGraph.siteName,
     title: siteConfig.openGraph.title,
     description: siteConfig.openGraph.description,
-    images: siteConfig.openGraph.images,
+    images: [...siteConfig.openGraph.images],
   },
   twitter: {
     card: siteConfig.twitter.card,
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     creator: siteConfig.twitter.creator,
     title: siteConfig.twitter.title,
     description: siteConfig.twitter.description,
-    images: siteConfig.twitter.images,
+    images: [...siteConfig.twitter.images],
   },
   robots: siteConfig.robots,
   icons: {

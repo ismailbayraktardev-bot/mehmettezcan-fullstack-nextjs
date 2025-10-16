@@ -16,6 +16,7 @@ const mappedProjects = projects.map(project => ({
   results: project.metrics,
   testimonial: project.testimonial,
   client: project.client,
+  image: project.thumbnail,
   href: `/projeler/${project.slug}`,
 }))
 
@@ -41,6 +42,7 @@ export default function ProjelerPage() {
                 category={project.category}
                 technologies={project.technologies}
                 results={project.results}
+                image={project.image}
                 href={project.href}
                 testimonial={project.testimonial}
                 client={project.client}

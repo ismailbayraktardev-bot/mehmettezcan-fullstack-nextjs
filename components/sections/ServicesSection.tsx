@@ -61,14 +61,14 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.0 }}
           className="text-center mb-32"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="inline-block px-4 py-2 glass rounded-full mb-6"
           >
             <span className="text-sm text-primary font-semibold uppercase tracking-wider">
@@ -94,7 +94,7 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.0 }}
             className="grid lg:grid-cols-[1.2fr,1fr] gap-12 items-center"
           >
             <Link href={services[0].href}>
@@ -115,18 +115,9 @@ export default function ServicesSection() {
                     {services[0].title}
                   </h3>
 
-                  <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+                  <p className="text-text-secondary text-lg mb-10 leading-relaxed">
                     {services[0].description}
                   </p>
-
-                  <ul className="space-y-3 mb-8">
-                    {services[0].features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-3 text-text-muted">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
                     <span>Keşfet</span>
@@ -142,9 +133,9 @@ export default function ServicesSection() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-200"
+                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 group-hover:from-primary/8 rounded-3xl transition-all duration-300" />
 
@@ -175,7 +166,7 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.0 }}
             className="grid md:grid-cols-2 gap-8 lg:gap-12"
           >
             <Link href={services[2].href}>
@@ -195,18 +186,9 @@ export default function ServicesSection() {
                     {services[2].title}
                   </h3>
 
-                  <p className="text-text-secondary mb-6 leading-relaxed">
+                  <p className="text-text-secondary mb-8 leading-relaxed">
                     {services[2].description}
                   </p>
-
-                  <ul className="space-y-2 mb-6">
-                    {services[2].features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-text-muted">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
                     <span>İncele</span>
@@ -221,9 +203,9 @@ export default function ServicesSection() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-200 h-full"
+                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-300 h-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 group-hover:from-primary/8 rounded-3xl transition-all duration-300" />
 
@@ -236,18 +218,9 @@ export default function ServicesSection() {
                     {services[3].title}
                   </h3>
 
-                  <p className="text-text-secondary mb-6 leading-relaxed">
+                  <p className="text-text-secondary mb-8 leading-relaxed">
                     {services[3].description}
                   </p>
-
-                  <ul className="space-y-2 mb-6">
-                    {services[3].features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-text-muted">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
                     <span>İncele</span>
@@ -263,7 +236,7 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.0 }}
             className="grid lg:grid-cols-[1fr,1.2fr] gap-12 items-center"
           >
             {/* Left Small Block */}
@@ -272,9 +245,9 @@ export default function ServicesSection() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
                 whileHover={{ y: -4, scale: 1.01 }}
-                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-200"
+                className="group relative glass-strong rounded-3xl p-8 lg:p-10 hover:border-primary/20 transition-colors duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 group-hover:from-primary/8 rounded-3xl transition-all duration-300" />
 
@@ -317,18 +290,9 @@ export default function ServicesSection() {
                     {services[5].title}
                   </h3>
 
-                  <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+                  <p className="text-text-secondary text-lg mb-10 leading-relaxed">
                     {services[5].description}
                   </p>
-
-                  <ul className="space-y-3 mb-8">
-                    {services[5].features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-3 text-text-muted">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
                     <span>Keşfet</span>
@@ -345,7 +309,7 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 1.0 }}
           className="text-center mt-32"
         >
           <Link href="/hizmetler">

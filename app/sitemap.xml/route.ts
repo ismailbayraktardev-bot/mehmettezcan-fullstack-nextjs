@@ -26,8 +26,7 @@ ${allPages.map(page => `  <url>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`).join('
-')}
+  </url>`).join('\n')}
 </urlset>`
 
   return new NextResponse(xml, {

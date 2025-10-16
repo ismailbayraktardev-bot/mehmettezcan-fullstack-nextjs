@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Bu route runtime'da çalışır, build time'da değil
+export const dynamic = 'force-dynamic'
+
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder_key')
 
 export async function POST(request: NextRequest) {
   try {
